@@ -6,10 +6,10 @@ const RADIUS = 120                  // 160 * 0.75 = 120
 const SPEED = 4.2
 const EXPAND_DURATION = 1000
 
-// PANTONE Black C
-const OVERLAY_COLOR = '#2D2926'
+// Dark overlay
+const OVERLAY_COLOR = 'rgba(10,10,10,0.97)'
 
-// VeryPeri
+// VeryPeri accent ring
 const ACCENT_COLOR = '#6667AB'
 
 export default function SpotlightOverlay() {
@@ -135,7 +135,7 @@ export default function SpotlightOverlay() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 z-[100]"
-      style={{ cursor: 'default' }}
+      style={{ cursor: 'none' }}
     />
   )
 }

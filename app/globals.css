@@ -4,9 +4,6 @@
 
 :root {
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-  --cloud-dancer: #F2EFE4;
-  --pantone-black: #2D2926;
-  --very-peri: #6667AB;
 }
 
 * {
@@ -18,9 +15,8 @@ html {
 }
 
 body {
-  /* PANTONE 11-4201 TCX Cloud Dancer */
-  background-color: #F2EFE4;
-  color: #2D2926;
+  background-color: #0a0a0a;
+  color: #e2e8f0;
   font-family: var(--font-mono), monospace;
 }
 
@@ -28,10 +24,10 @@ body {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #e8e4d8;
+  background: #111;
 }
 ::-webkit-scrollbar-thumb {
-  background: #b0ab9e;
+  background: #333;
   border-radius: 2px;
 }
 
@@ -46,7 +42,7 @@ body {
   left: 0;
   width: 0;
   height: 1px;
-  background: #6667AB;
+  background: #7c6af7;
   transition: width 0.3s ease;
 }
 
@@ -66,7 +62,7 @@ body {
   font-size: 0.7rem;
   padding: 2px 8px;
   border-radius: 3px;
-  background: rgba(102, 103, 171, 0.12);
-  border: 1px solid rgba(102, 103, 171, 0.35);
-  color: #4a4b8a;
+  background: rgba(124, 106, 247, 0.15);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+  color: #a89cf7;
 }
