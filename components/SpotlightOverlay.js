@@ -2,14 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-const RADIUS = 120                  // 160 * 0.75 = 120
-const SPEED = 4.2
+const RADIUS = 160
+const SPEED = 6.0
 const EXPAND_DURATION = 1000
 
-// Dark overlay
-const OVERLAY_COLOR = 'rgba(10,10,10,0.97)'
+// PANTONE 11-4201 TCX — Blanc de Blanc (warm off-white)
+const OVERLAY_COLOR = '#F2EFE4'
 
-// VeryPeri accent ring
+// VeryPeri — PANTONE Color of the Year 2022
 const ACCENT_COLOR = '#6667AB'
 
 export default function SpotlightOverlay() {
@@ -135,7 +135,7 @@ export default function SpotlightOverlay() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 z-[100]"
-      style={{ cursor: 'none' }}
+      style={{ cursor: 'default' }}
     />
   )
 }
