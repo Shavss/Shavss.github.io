@@ -10,9 +10,13 @@ export default function CursorBuddy() {
   const cursorX = useMotionValue(0)
   const cursorY = useMotionValue(0)
 
-  const springConfig = { damping: 25, stiffness: 700 }
-  const cursorXSpring = useSpring(cursorX, springConfig)
-  const cursorYSpring = useSpring(cursorY, springConfig)
+  // Inner cursor springs (fast)
+  const innerX = useSpring(cursorX, { damping: 25, stiffness: 700 })
+  const innerY = useSpring(cursorY, { damping: 25, stiffness: 700 })
+
+  // Outer ring springs (slower, lagging behind)
+  const outerX = useSpring(cursorX, { damping: 35, stiffness: 300 })
+  const outerY = useSpring(cursorY, { damping: 35, stiffness: 300 })
 
   const handleMouseMove = useCallback((e) => {
     cursorX.set(e.clientX - 12)
@@ -49,10 +53,10 @@ export default function CursorBuddy() {
 
   return (
     <>
-      {/* Main dot cursor */}
+      {/* Inner dot — fast spring */}
       <motion.div
         className="pointer-events-none fixed z-[9999] hidden md:block"
-        style={{ x: cursorXSpring, y: cursorYSpring }}
+        style={{ x: innerX, y: innerY }}
       >
         <motion.div
           animate={{
@@ -60,19 +64,17 @@ export default function CursorBuddy() {
             height: isHovering ? 28 : 10,
             backgroundColor: isHovering ? 'rgba(124,106,247,0.6)' : 'rgba(124,106,247,1)',
             borderRadius: '50%',
+            marginTop: isHovering ? -4 : 0,
+            marginLeft: isHovering ? -4 : 0,
           }}
           transition={{ duration: 0.2 }}
-          style={{ marginTop: isHovering ? -4 : 0, marginLeft: isHovering ? -4 : 0 }}
         />
       </motion.div>
 
-      {/* Outer ring */}
+      {/* Outer ring — slow spring */}
       <motion.div
         className="pointer-events-none fixed z-[9998] hidden md:block"
-        style={{
-          x: useSpring(cursorX, { damping: 35, stiffness: 300 }),
-          y: useSpring(cursorY, { damping: 35, stiffness: 300 }),
-        }}
+        style={{ x: outerX, y: outerY }}
       >
         <motion.div
           animate={{
