@@ -49,8 +49,8 @@ export default function Projects() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="text-[#7c6af7] text-xs tracking-widest uppercase mb-2">Selected Work</p>
-        <h2 className="text-3xl font-bold text-white mb-12">Projects</h2>
+        <p className="text-[#6667AB] text-xs tracking-widest uppercase mb-2">Selected Work</p>
+        <h2 className="text-3xl font-bold text-[#2D2926] mb-12">Projects</h2>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -64,18 +64,18 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="project-card block p-6 rounded-lg border border-white/5 bg-white/[0.02] hover:border-[#7c6af7]/40 hover:bg-white/[0.04] group"
+            className="project-card block p-6 rounded-lg border border-[#2D2926]/10 bg-[#2D2926]/[0.03] hover:border-[#6667AB]/50 hover:bg-[#6667AB]/[0.05] group"
             data-hover
           >
             <div className="flex justify-between items-start mb-3">
-              <h3 className="text-white font-semibold text-sm leading-snug group-hover:text-[#a89cf7] transition-colors">
+              <h3 className="text-[#2D2926] font-semibold text-sm leading-snug group-hover:text-[#6667AB] transition-colors">
                 {p.name}
               </h3>
-              <svg className="w-4 h-4 text-gray-600 group-hover:text-[#7c6af7] transition-colors flex-shrink-0 ml-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-[#2D2926]/30 group-hover:text-[#6667AB] transition-colors flex-shrink-0 ml-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 7l-10 10M7 7h10v10" />
               </svg>
             </div>
-            <p className="text-gray-500 text-xs leading-relaxed mb-4">{p.description}</p>
+            <p className="text-[#2D2926]/55 text-xs leading-relaxed mb-4">{p.description}</p>
             <div className="flex flex-wrap gap-2">
               {p.tags.map(t => (
                 <span key={t} className="tag">{t}</span>

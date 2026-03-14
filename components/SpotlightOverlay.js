@@ -2,14 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-const RADIUS = 160
-const SPEED = 6.0
+const RADIUS = 120                  // 160 * 0.75 = 120
+const SPEED = 4.2
 const EXPAND_DURATION = 1000
 
-// PANTONE 11-4201 TCX — Blanc de Blanc (warm off-white)
-const OVERLAY_COLOR = '#F2EFE4'
+// PANTONE Black C
+const OVERLAY_COLOR = '#2D2926'
 
-// VeryPeri — PANTONE Color of the Year 2022
+// VeryPeri
 const ACCENT_COLOR = '#6667AB'
 
 export default function SpotlightOverlay() {
@@ -52,12 +52,10 @@ export default function SpotlightOverlay() {
         const maxR = Math.sqrt(W * W + H * H)
         const r = RADIUS + (maxR - RADIUS) * eased
 
-        // Draw overlay
         ctx.clearRect(0, 0, W, H)
         ctx.fillStyle = OVERLAY_COLOR
         ctx.fillRect(0, 0, W, H)
 
-        // Sharp circle cutout
         ctx.save()
         ctx.globalCompositeOperation = 'destination-out'
         ctx.beginPath()
@@ -75,7 +73,6 @@ export default function SpotlightOverlay() {
         return
       }
 
-      // Bounce
       const pos = posRef.current
       const vel = velRef.current
       pos.x += vel.x
@@ -86,12 +83,10 @@ export default function SpotlightOverlay() {
       if (pos.y - RADIUS < 0)  { pos.y = RADIUS;     vel.y =  Math.abs(vel.y) }
       if (pos.y + RADIUS > H)  { pos.y = H - RADIUS; vel.y = -Math.abs(vel.y) }
 
-      // Fill overlay
       ctx.clearRect(0, 0, W, H)
       ctx.fillStyle = OVERLAY_COLOR
       ctx.fillRect(0, 0, W, H)
 
-      // Sharp circular cutout
       ctx.save()
       ctx.globalCompositeOperation = 'destination-out'
       ctx.beginPath()
@@ -100,7 +95,6 @@ export default function SpotlightOverlay() {
       ctx.fill()
       ctx.restore()
 
-      // VeryPeri circle ring around the cutout
       ctx.save()
       ctx.beginPath()
       ctx.arc(pos.x, pos.y, RADIUS, 0, Math.PI * 2)
@@ -119,7 +113,6 @@ export default function SpotlightOverlay() {
       expanding = true
       expandFromX = posRef.current.x
       expandFromY = posRef.current.y
-      // capture start time on next frame for accuracy
       cancelAnimationFrame(rafRef.current)
       rafRef.current = requestAnimationFrame((ts) => {
         expandStart = ts
