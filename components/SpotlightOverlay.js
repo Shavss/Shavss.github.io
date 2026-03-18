@@ -2,15 +2,16 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-const RADIUS = 160
-const SPEED = 6.0
+const RADIUS = 100
+const SPEED = 4.2
 const EXPAND_DURATION = 1000
 
 // PANTONE 11-4201 TCX — Blanc de Blanc (warm off-white)
-const OVERLAY_COLOR = '#F2EFE4'
+const OVERLAY_COLOR = '#0A0A0A'
+const OVERLAY_COLOR_2 = '#E2E8F0'
 
 // VeryPeri — PANTONE Color of the Year 2022
-const ACCENT_COLOR = '#6667AB'
+const ACCENT_COLOR = '#0A0A0A'
 
 export default function SpotlightOverlay() {
   const canvasRef = useRef(null)
