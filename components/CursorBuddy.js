@@ -1,96 +1,30 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
-import { motion, useSpring, useMotionValue } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 export default function CursorBuddy() {
-  const [isMobile, setIsMobile] = useState(true)
-  const [isHovering, setIsHovering] = useState(false)
-
-  const cursorX = useMotionValue(0)
-  const cursorY = useMotionValue(0)
-
-  // Inner cursor springs (fast)
-  const innerX = useSpring(cursorX, { damping: 25, stiffness: 700 })
-  const innerY = useSpring(cursorY, { damping: 25, stiffness: 700 })
-
-  // Outer ring springs (slower, lagging behind)
-  const outerX = useSpring(cursorX, { damping: 35, stiffness: 300 })
-  const outerY = useSpring(cursorY, { damping: 35, stiffness: 300 })
-
-  const handleMouseMove = useCallback((e) => {
-    cursorX.set(e.clientX - 12)
-    cursorY.set(e.clientY - 12)
-  }, [cursorX, cursorY])
+  const glowRef = useRef(null)
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.matchMedia('(pointer: coarse)').matches)
+    const isMobile = window.matchMedia('(pointer: coarse)').matches
+    if (isMobile) return
+
+    const el = glowRef.current
+    if (!el) return
+
+    const handleMouseMove = (e) => {
+      el.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(102, 103, 171, 0.15), transparent 80%)`
     }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
+
     window.addEventListener('mousemove', handleMouseMove)
-
-    const interactables = document.querySelectorAll('a, button, [data-hover]')
-    const onEnter = () => setIsHovering(true)
-    const onLeave = () => setIsHovering(false)
-    interactables.forEach(el => {
-      el.addEventListener('mouseenter', onEnter)
-      el.addEventListener('mouseleave', onLeave)
-    })
-
-    return () => {
-      window.removeEventListener('resize', checkMobile)
-      window.removeEventListener('mousemove', handleMouseMove)
-      interactables.forEach(el => {
-        el.removeEventListener('mouseenter', onEnter)
-        el.removeEventListener('mouseleave', onLeave)
-      })
-    }
-  }, [handleMouseMove])
-
-  if (isMobile) return null
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
 
   return (
-    <>
-      {/* Inner dot — fast spring */}
-      <motion.div
-        className="pointer-events-none fixed z-[9999] hidden md:block"
-        style={{ x: innerX, y: innerY }}
-      >
-        <motion.div
-          animate={{
-            width: isHovering ? 28 : 10,
-            height: isHovering ? 28 : 10,
-            backgroundColor: isHovering ? 'rgba(124,106,247,0.6)' : 'rgba(124,106,247,1)',
-            borderRadius: '50%',
-            marginTop: isHovering ? -4 : 0,
-            marginLeft: isHovering ? -4 : 0,
-          }}
-          transition={{ duration: 0.2 }}
-        />
-      </motion.div>
-
-      {/* Outer ring — slow spring */}
-      <motion.div
-        className="pointer-events-none fixed z-[9998] hidden md:block"
-        style={{ x: outerX, y: outerY }}
-      >
-        <motion.div
-          animate={{
-            width: isHovering ? 48 : 32,
-            height: isHovering ? 48 : 32,
-            borderColor: isHovering ? 'rgba(124,106,247,0.8)' : 'rgba(124,106,247,0.3)',
-            marginTop: isHovering ? -12 : -6,
-            marginLeft: isHovering ? -12 : -6,
-          }}
-          transition={{ duration: 0.2 }}
-          style={{
-            borderRadius: '50%',
-            border: '1.5px solid rgba(124,106,247,0.3)',
-          }}
-        />
-      </motion.div>
-    </>
+    <div
+      ref={glowRef}
+      className="pointer-events-none fixed inset-0 z-30 transition-none"
+      style={{ background: 'transparent' }}
+    />
   )
 }
