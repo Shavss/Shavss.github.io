@@ -1,6 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+
+const TECHS = [
+  { name: 'Python',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+  { name: 'PyTorch',    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
+  { name: 'React',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'Next.js',    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+  { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+  { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+  { name: 'Docker',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+  { name: 'Git',        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+]
 
 export default function Hero() {
   return (
@@ -24,7 +36,7 @@ export default function Hero() {
           3D BIM web platforms to multimodal deep learning pipelines.
           Currently pursuing MSc in Information Technologies for the Built Environment.
         </p>
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex gap-4 flex-wrap mb-12">
           <a
             href="#projects"
             className="px-6 py-3 bg-[#7c6af7] text-white text-sm tracking-widest uppercase rounded hover:bg-[#6a58e0] transition-colors"
@@ -37,6 +49,19 @@ export default function Hero() {
           >
             Contact
           </a>
+        </div>
+
+        {/* Tech stack grid */}
+        <div className="grid grid-cols-4 gap-3">
+          {TECHS.map((tech) => (
+            <div
+              key={tech.name}
+              className="flex flex-col items-center gap-2 p-4 rounded-xl border border-white/10 bg-white/5 hover:border-[#7c6af7]/40 hover:bg-white/10 transition-all"
+            >
+              <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
+              <span className="text-xs text-gray-400">{tech.name}</span>
+            </div>
+          ))}
         </div>
       </motion.div>
 

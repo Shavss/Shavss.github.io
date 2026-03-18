@@ -8,14 +8,16 @@ import Contact from '../components/Contact'
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#0a0a0a]">
+    <main className="relative min-h-screen bg-[#F3F0E9]">
       <SpotlightOverlay />
       <CursorBuddy />
-      <Nav />
-      <Hero />
-      <Projects />
-      <About />
-      <Contact />
+      <div className="mx-auto w-1/2 min-w-[320px]">
+        <Nav />
+        <Hero />
+        <Projects />
+        <About />
+        <Contact />
+      </div>
     </main>
   )
 }

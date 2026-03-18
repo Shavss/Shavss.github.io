@@ -6,15 +6,14 @@
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #f2efe4; 
+  background-color: #f0efeb;
   color: #e2e8f0;
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-inter), Inter, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -62,4 +61,8 @@ body {
   background: rgba(124, 106, 247, 0.15);
   border: 1px solid rgba(124, 106, 247, 0.3);
   color: #6667ab;
+}
+
+.mono {
+  font-family: var(--font-mono);
 }
