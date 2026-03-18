@@ -6,16 +6,13 @@
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 }
 
-* {
-  cursor: none;
-}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #0a0a0a;
+  background-color: #f2efe4; 
   color: #e2e8f0;
   font-family: var(--font-mono), monospace;
 }
@@ -42,7 +39,7 @@ body {
   left: 0;
   width: 0;
   height: 1px;
-  background: #7c6af7;
+  background: #6667ab;
   transition: width 0.3s ease;
 }
 
@@ -64,5 +61,5 @@ body {
   border-radius: 3px;
   background: rgba(124, 106, 247, 0.15);
   border: 1px solid rgba(124, 106, 247, 0.3);
-  color: #a89cf7;
+  color: #6667ab;
 }
