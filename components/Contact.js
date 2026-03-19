@@ -19,7 +19,7 @@ export default function Contact() {
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <a
-            href="mailto:kacper@example.com"
+            href="mailto:kacper.ryske@outlook.com"
             className="px-8 py-3 bg-[#7c6af7] text-white text-sm tracking-widest uppercase rounded hover:bg-[#6a58e0] transition-colors"
             data-hover
           >
@@ -35,7 +35,7 @@ export default function Contact() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/kacper-ryske"
+            href="https://www.linkedin.com/in/kacper-ryske-30125824a/"
             target="_blank"
             rel="noreferrer"
             className="px-8 py-3 border border-white/10 text-gray-300 text-sm tracking-widest uppercase rounded hover:border-[#7c6af7] hover:text-white transition-all"
