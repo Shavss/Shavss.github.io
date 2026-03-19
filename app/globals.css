@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #f0efeb;
+  background-color: #0e1529;
   color: #e2e8f0;
   font-family: var(--font-inter), Inter, sans-serif;
 }
@@ -20,7 +20,7 @@ body {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #111;
+  background: #0e1529;
 }
 ::-webkit-scrollbar-thumb {
   background: #333;
