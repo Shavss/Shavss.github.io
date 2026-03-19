@@ -29,12 +29,10 @@ export default function Hero() {
           Kacper Ryske
         </h1>
         <h2 className="text-2xl md:text-3xl text-gray-400 font-light mb-6">
-          Software Engineer &amp; ML Researcher
+          Software Developer &amp; ML Researcher
         </h2>
         <p className="text-gray-500 max-w-xl leading-relaxed text-sm mb-10">
-          I build full-stack applications and machine learning systems — from
-          3D BIM web platforms to multimodal deep learning pipelines.
-          Currently pursuing MSc in Information Technologies for the Built Environment.
+          I’m a software developer with an architect’s attention to detail and an engineering mindset. I build automation tools, data pipelines, and intelligent systems that make complex work simpler. I’m particularly interested in AI, analytical systems, and building robust software for real-world applications.
         </p>
         <div className="flex gap-4 flex-wrap mb-12">
           <a
@@ -58,7 +56,7 @@ export default function Hero() {
               key={tech.name}
               className="flex flex-col items-center gap-2 p-4 rounded-xl border border-white/10 bg-white/5 hover:border-[#7c6af7]/40 hover:bg-white/10 transition-all"
             >
-              <img src={tech.icon} alt={tech.name} className="w-8 h-8" />
+              <img src={tech.icon} alt={tech.name} className="w-8 h-8" style={{ filter: 'brightness(0)  invert(1)'  }} />
               <span className="text-xs text-gray-400">{tech.name}</span>
             </div>
           ))}

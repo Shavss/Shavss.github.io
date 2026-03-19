@@ -30,10 +30,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-gray-400 text-sm leading-relaxed mb-4">
-            I&apos;m a software engineer and researcher currently completing my MSc in
-            Information Technologies for the Built Environment. My thesis focuses on
-            multimodal deep learning for insect species classification — fusing
-            visual features with ecological context data.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <p className="text-gray-400 text-sm leading-relaxed mb-4">
             Previously at Siemens as a working student Software Engineer, and
@@ -41,8 +38,7 @@ export default function About() {
             of software engineering and machine learning.
           </p>
           <p className="text-gray-400 text-sm leading-relaxed">
-            When I&apos;m not writing code or training models, I explore citizen science
-            datasets and urban biodiversity conservation topics.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </motion.div>
 
