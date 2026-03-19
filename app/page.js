@@ -5,6 +5,7 @@ import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 import About from '../components/About'
 import Contact from '../components/Contact'
+import InstitutionsBanner from '../components/InstitutionsBanner'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <div className="mx-auto w-1/2 min-w-[320px]">
         <Nav />
         <Hero />
+        <InstitutionsBanner />   {/* ← add here */}
         <Projects />
         <About />
         <Contact />
