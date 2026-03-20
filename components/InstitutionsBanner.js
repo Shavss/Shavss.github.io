@@ -3,14 +3,11 @@
 import { useEffect, useRef } from 'react'
 
 const INSTITUTIONS = [
-  { name: 'TUM' },
-  { name: 'MIT' },
+  { name: 'Technical University of Munich' },
   { name: 'University of Glasgow' },
   { name: 'Siemens' },
   { name: 'David Chipperfield Architects' },
-  { name: 'Augmented Fabrication Lab' },
-  { name: 'ZM-I Müller' },
-  { name: 'AEC Hackathon' },
+  { name: 'ZM-I' },
   { name: 'Innovia Partners' },
   { name: 'MIT Senseable City Lab' },
 ]
