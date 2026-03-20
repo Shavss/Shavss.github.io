@@ -24,12 +24,12 @@ export const featured = [
         url: 'https://github.com/augmentedfabricationlab/climate_active_envelopes',
     },
     {
-      name: 'Kitty Splitty',
-      subtitle: 'University Project — TUM',
-      description:
-        'Group expense management prototype with full database design. Implements shared kitty creation, multi-type transaction splitting, user login tracking, and financial overviews. Business logic written in C# with relational database interactions and a REST API layer.',
-      tags: ['C#', '.NET', 'SQL', 'REST API', 'Database Design'],
-      url: 'https://github.com/Shavss/kitty-split-prototype',
+        name: 'Automated PDF Extraction Pipeline',
+        subtitle: 'Data Engineer — ZM-I Müller',
+        description:
+          'Python pipeline automating extraction of structural engineering data from PDF reports using modular scrapers. Parsed data is inserted into local and Azure SQL databases via SQLAlchemy, feeding a physics-informed neural network for structural design optimisation.',
+        tags: ['Python', 'SQL', 'Azure', 'SQLAlchemy', 'Automation'],
+        url: 'https://github.com/Shavss/data-managment',
     },
   ]
   
@@ -44,13 +44,14 @@ export const featured = [
       url: 'https://github.com/LupoSun/AECHachathon_MOD_ParseThat',
     },
     {
-      name: 'Automated PDF Extraction Pipeline',
-      subtitle: 'Data Engineer — ZM-I Müller',
-      description:
-        'Python pipeline automating extraction of structural engineering data from PDF reports using modular scrapers. Parsed data is inserted into local and Azure SQL databases via SQLAlchemy, feeding a physics-informed neural network for structural design optimisation.',
-      tags: ['Python', 'SQL', 'Azure', 'SQLAlchemy', 'Automation'],
-      url: 'https://github.com/Shavss/data-managment',
+        name: 'Kitty Splitty',
+        subtitle: 'University Project — TUM',
+        description:
+          'Group expense management prototype with full database design. Implements shared kitty creation, multi-type transaction splitting, user login tracking, and financial overviews. Business logic written in C# with relational database interactions and a REST API layer.',
+        tags: ['C#', '.NET', 'SQL', 'REST API', 'Database Design'],
+        url: 'https://github.com/Shavss/kitty-split-prototype',
     },
+
     {
         name: 'Legacy Calculator Modernisation',
         subtitle: 'Software Developer — Siemens',
