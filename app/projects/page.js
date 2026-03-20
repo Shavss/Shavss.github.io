@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <main className="relative min-h-screen bg-[#0a0a0a] px-6 py-24">
+    <main className="relative min-h-screen bg-[#0e1529] px-6 py-24">
       <div className="max-w-4xl mx-auto">
         <Link
           href="/"
