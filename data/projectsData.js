@@ -25,7 +25,7 @@ export const featured = [
     },
     {
         name: 'Automated PDF Extraction Pipeline',
-        subtitle: 'Data Engineer — ZM-I Müller',
+        subtitle: 'Data Engineer — ZM-I Engineers',
         description:
           'Python pipeline automating extraction of structural engineering data from PDF reports using modular scrapers. Parsed data is inserted into local and Azure SQL databases via SQLAlchemy, feeding a physics-informed neural network for structural design optimisation.',
         tags: ['Python', 'SQL', 'Azure', 'SQLAlchemy', 'Automation'],
