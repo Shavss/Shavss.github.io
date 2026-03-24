@@ -30,13 +30,13 @@ export default function About() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-gray-400 text-sm leading-relaxed mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          I studied Architecture at the University of Glasgow, where my dissertation on Amazon distribution centres first got me thinking about how data-driven algorithms shape physical spaces. That thread kept pulling. At David Chipperfield Architects, I joined the digital transformation team and dove headfirst into data modelling, business intelligence, and engineering queries. It was a steep learning curve that made me realise I wanted to build the systems themselves, not just use them.
           </p>
           <p className="text-gray-400 text-sm leading-relaxed mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          That led me to a Master's in Information Technologies at the Technical University of Munich, specialising in software development and AI. Along the way, I worked with Siemens on legacy system modernisation and completed my thesis at MIT's Senseable City Lab, building a Bayesian fusion model for urban species classification.
           </p>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          I bring an architect's instinct for structure and clarity to software. How systems are organised matters as much as whether they work. I'm looking for roles in software engineering, ML, or data engineering where I can keep building things that connect computation to the real world.
           </p>
         </motion.div>
 
