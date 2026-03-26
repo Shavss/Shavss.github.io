@@ -21,7 +21,7 @@ export const featured = [
         description:
           'Contributed to an open-source robotic fabrication research project exploring climate-responsive building envelopes. Worked on assembly.py, implementing graph and network data structures for component sequencing and spatial logic within the fabrication pipeline.',
         tags: ['Python', 'Graph Structures', 'Robotic Fabrication', 'Research'],
-        url: 'https://github.com/augmentedfabricationlab/climate_active_envelopes',
+        url: 'https://shavss.github.io/climate_active_envelopes/',
     },
     {
         name: 'Automated PDF Extraction Pipeline',
@@ -41,7 +41,7 @@ export const featured = [
       description:
         'Hackathon contribution to a smart prefab element parser for the AEC construction industry. Extracts and structures product data from unstructured manufacturer documents to populate a standardised prefab component database.',
       tags: ['Python', 'NLP', 'Parsing', 'AEC', 'Open Source'],
-      url: 'https://github.com/LupoSun/AECHachathon_MOD_ParseThat',
+      url: 'https://shavss.github.io/AECHachathon_MOD_ParseThat/',
     },
     {
         name: 'Kitty Splitty',
