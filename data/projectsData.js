@@ -1,7 +1,7 @@
 export const featured = [
   {
       name: 'Paketpost Aerial Vision',
-      subtitle: 'Group Project — TUM',
+      subtitle: 'Group Project — Technical University of Munich',
       description:
         'Full-stack proptech web application built for a real Munich postal depot redevelopment brief. Combines interactive 3D site visualisation with live data overlays to support early-stage urban design decisions. Built with the MERN stack and deployed on Azure.',
       tags: ['MongoDB', 'Express', 'React', 'Node.js', 'Azure'],
@@ -9,7 +9,7 @@ export const featured = [
   },
   {
     name: 'Digital Naturalist',
-    subtitle: 'MSc Thesis — MIT',
+    subtitle: 'MSc Thesis — Massachusetts Institute of Technology',
     description:
       'Bayesian Product of Experts fusion model combining ResNet-18 vision with XGBoost habitat suitability for context-aware urban insect species classification across 8 species and 11,000+ citizen-science observations in Amsterdam. Achieved +2.5 pp average accuracy over the vision-only baseline.',
     tags: ['Python', 'PyTorch', 'XGBoost', 'ResNet-18', 'PoE Fusion', 'Jupyter Notebook'],
@@ -45,7 +45,7 @@ export const all = [
   },
   {
       name: 'Kitty Splitty',
-      subtitle: 'University Project — TUM',
+      subtitle: 'University Project — Technical University of Munich',
       description:
         'Group expense management prototype with full database design. Implements shared kitty creation, multi-type transaction splitting, user login tracking, and financial overviews. Built in C# with Entity Framework and SQLite for relational data persistence.',
       tags: ['C#', '.NET', 'SQL', 'Entity Framework', 'Database Design'],
