@@ -39,7 +39,7 @@ export const all = [
     name: 'Parse That!',
     subtitle: 'Hackathon — AEC Tech Munich 2024',
     description:
-      'LLM-powered data pipeline built at a hackathon with MOD (modular construction). Uses GPT-4 and LangChain to extract structured product data from unstructured manufacturer PDFs into a typed Pydantic schema for BIM and digital product libraries.',
+      'LLM-powered data pipeline built at AEC Tech Munich with MOD (modular construction). Uses GPT-4 and LangChain to extract structured product data from unstructured manufacturer PDFs into a typed Pydantic schema for BIM and digital product libraries.',
     tags: ['Python', 'GPT-4', 'LangChain', 'Pydantic', 'Flask', 'AEC'],
     url: 'https://shavss.github.io/AECHachathon_MOD_ParseThat/',
   },
