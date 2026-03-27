@@ -60,4 +60,13 @@ export const all = [
       tags: ['Python', 'YAML', 'REST API', 'Excel', 'Automation'],
       url: 'https://github.com/',
   },
+
+  {
+    name: 'Deep Vectorisation of Technical Drawings',
+    subtitle: 'University Project — Technical University of Munich',
+    description:
+      'Deep learning pipeline for converting raster architectural drawings into structured vector geometry. Implemented U-Net segmentation and transformer-based line detection with skeletonisation post-processing and SVG output. Explored synthetic data generation to address the scarcity of labelled real-world architectural drawing datasets.',
+    tags: ['Python', 'TensorFlow', 'U-Net', 'Transformers', 'OpenCV', 'SVG', 'Computer Vision'],
+    url: 'https://github.com/Shavss/Software-Lab',
+  },
 ]
