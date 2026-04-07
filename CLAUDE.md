@@ -19,7 +19,8 @@ Loaded via `next/font/google` in `app/layout.js`. Add new fonts here only.
 ## Styling Rules
 - All utility classes must exist in Tailwind v3 base stylesheet (no JIT-only classes that won't purge correctly)
 - Custom CSS goes in `globals.css` using `@layer` or plain class definitions
-- All colours defined as CSS custom properties in `globals.css` and as Tailwind theme tokens in `tailwind.config.js`
+- All colours defined as CSS custom properties in `globals.css`; Tailwind theme tokens in `tailwind.config.js` reference those variables
+- Tailwind colour opacity modifiers (`text-ink/60`) do not work with CSS variable colours — use explicit utility classes instead
 
 ## Component Conventions
 - All interactive components are `'use client'`; static components can be server components
@@ -36,19 +37,39 @@ Loaded via `next/font/google` in `app/layout.js`. Add new fonts here only.
 
 ## Design System — Swiss Grid / Brutalist Typography
 
-### Colour Palette
-- **Canvas (bg):** `#0A0A0A` — near-black
-- **Surface:** `#111111` — slightly raised backgrounds
-- **Ink (fg):** `#E8E4DC` — warm off-white
-- **Muted:** `#6B6560` — warm gray for secondary text
-- **Accent:** `#D4580A` — burnt orange (Bauhaus-inspired)
-- **Rule:** `#2A2A2A` — visible structural rules
-- **Stroke:** `#1E1E1E` — subtle borders
+### Colour Palettes (3 themes via `data-theme` attribute)
+
+**Theme A — Dark Bauhaus (default):**
+- Canvas: `#0A0A0A` / Surface: `#111111` / Ink: `#E8E4DC`
+- Muted: `#8A8480` (WCAG AA compliant, 5.4:1) / Accent: `#D4580A`
+- Rule: `#2A2A2A` / Stroke: `#1E1E1E`
+
+**Theme B — Dark Industrial Green:**
+- Canvas: `#0A0F0A` / Surface: `#111611` / Ink: `#D8EDDA`
+- Muted: `#7A9B7E` / Accent: `#39FF6E`
+- Rule: `#1A2A1A` / Stroke: `#152015`
+
+**Theme C — Light Swiss Editorial:**
+- Canvas: `#F5F2EC` / Surface: `#EBE8E2` / Ink: `#0A0A0A`
+- Muted: `#6B6560` / Accent: `#D4580A`
+- Rule: `#D0CDC7` / Stroke: `#E0DDD7`
+
+### Typography
+- Body / prose: 15px, line-height 1.65, justified with `hyphens: auto` (`.prose-body` class)
+- Tags / metadata: 12px minimum (`.tag` class)
+- Nav links: 12px uppercase tracking
+- Section headings: 28–36px
+- Hero display: 48–60px, leading 1.1
+- Content column: `max-w-[720px]` (editorial width, min 320px mobile)
 
 ### Key Accent Colour
 `#D4580A` (burnt orange) — Bauhaus-inspired editorial accent.
 
 ### Design Decisions
-- About section: restored in page.js with Swiss grid two-column layout
+- About section: removed — not needed for general software dev positioning
 - AIOrb: removed — felt decorative, not intentional in this aesthetic
 - CursorBuddy: removed — radial gradient glow conflicts with brutalist direction
+- CursorGrid: canvas-based registration-mark grid with radial pulse waves on cursor move
+- GridPulse: terminal-style data readout in Hero (x/y coords, frame counter, timestamp, resolution)
+- ThemeSwitcher: fixed bottom-right, cycles three palettes, persists to localStorage
+- Featured projects: reduced to 3 (Digital Naturalist, Climate Active Envelopes, Paketpost)

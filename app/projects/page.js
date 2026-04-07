@@ -9,7 +9,7 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <main className="relative min-h-screen bg-canvas px-6 md:px-10 py-24">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-[720px] min-w-[320px] mx-auto">
         <Link
           href="/"
           className="inline-flex items-center gap-2 font-mono text-xs text-muted hover:text-accent transition-colors tracking-wider uppercase mb-16"
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
                   <p className="font-mono text-xs text-accent tracking-wide mb-4">
                     {p.subtitle}
                   </p>
-                  <p className="font-body text-sm text-muted leading-relaxed">
+                  <p className="prose-body text-muted">
                     {p.description}
                   </p>
                 </div>

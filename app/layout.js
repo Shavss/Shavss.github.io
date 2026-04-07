@@ -23,8 +23,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${spaceMono.variable} ${workSans.variable}`}>
+    <html lang="en" className={`${spaceMono.variable} ${workSans.variable}`} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('theme');if(t&&['a','b','c'].indexOf(t)>-1)document.documentElement.setAttribute('data-theme',t)}catch(e){}})()` }} />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CKL34G5380"
           strategy="afterInteractive"

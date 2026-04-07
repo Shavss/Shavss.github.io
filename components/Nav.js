@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 
 const NAV_LINKS = [
-  { label: 'About', href: '#about' },
   { label: 'Work', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -22,9 +21,9 @@ export default function Nav() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'backdrop-blur-sm border-b border-stroke' : ''
       }`}
-      style={{ backgroundColor: scrolled ? 'rgba(10,10,10,0.92)' : 'transparent' }}
+      style={{ backgroundColor: scrolled ? 'var(--nav-bg)' : 'transparent' }}
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
+      <div className="max-w-[720px] mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
         <a
           href="#"
           className="font-display text-base font-bold tracking-tight text-ink"

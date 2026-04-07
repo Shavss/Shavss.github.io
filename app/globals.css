@@ -4,14 +4,41 @@
 
 /* ── Design System Tokens ── */
 
-:root {
+/* Theme A — Dark Bauhaus (default) */
+:root,
+[data-theme="a"] {
   --color-canvas: #0A0A0A;
   --color-surface: #111111;
   --color-ink: #E8E4DC;
-  --color-muted: #6B6560;
+  --color-muted: #8A8480;
   --color-accent: #D4580A;
   --color-rule: #2A2A2A;
   --color-stroke: #1E1E1E;
+  --nav-bg: rgba(10, 10, 10, 0.92);
+}
+
+/* Theme B — Dark Industrial Green */
+[data-theme="b"] {
+  --color-canvas: #0A0F0A;
+  --color-surface: #111611;
+  --color-ink: #D8EDDA;
+  --color-muted: #7A9B7E;
+  --color-accent: #39FF6E;
+  --color-rule: #1A2A1A;
+  --color-stroke: #152015;
+  --nav-bg: rgba(10, 15, 10, 0.92);
+}
+
+/* Theme C — Light Swiss Editorial */
+[data-theme="c"] {
+  --color-canvas: #F5F2EC;
+  --color-surface: #EBE8E2;
+  --color-ink: #0A0A0A;
+  --color-muted: #6B6560;
+  --color-accent: #D4580A;
+  --color-rule: #D0CDC7;
+  --color-stroke: #E0DDD7;
+  --nav-bg: rgba(245, 242, 236, 0.92);
 }
 
 /* ── Base ── */
@@ -31,6 +58,21 @@ body {
 ::selection {
   background: var(--color-accent);
   color: var(--color-canvas);
+}
+
+/* ── Prose / Body Text ── */
+
+.prose-body {
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  overflow-wrap: break-word;
 }
 
 /* ── Scrollbar — minimal ── */
@@ -82,8 +124,20 @@ body {
 
 .tag {
   font-family: var(--font-space-mono), monospace;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-muted);
+}
+
+/* ── Terminal cursor blink ── */
+
+@keyframes terminal-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.terminal-cursor {
+  animation: terminal-blink 1s step-end infinite;
+  color: var(--color-ink);
 }

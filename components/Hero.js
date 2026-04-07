@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import GridPulse from './GridPulse'
 
 const TECHS = [
   'Python', 'PyTorch', 'React', 'Next.js',
@@ -27,14 +28,17 @@ export default function Hero() {
           className="h-[3px] bg-ink mb-10 md:mb-14"
         />
 
-        {/* Name — massive typographic statement */}
-        <motion.h1
+        {/* Name + GridPulse readout */}
+        <motion.div
           variants={fade}
           transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-display text-5xl md:text-[6rem] lg:text-[9rem] font-bold leading-[0.88] tracking-tight text-ink uppercase"
+          className="flex justify-between items-start gap-6"
         >
-          Kacper<br />Ryske
-        </motion.h1>
+          <h1 className="font-display text-5xl md:text-[60px] font-bold leading-[1.1] tracking-tight text-ink uppercase">
+            Kacper<br />Ryske
+          </h1>
+          <GridPulse />
+        </motion.div>
 
         {/* Thin rule */}
         <motion.div
@@ -56,7 +60,7 @@ export default function Hero() {
             </h2>
           </div>
           <div>
-            <p className="font-body text-sm text-muted leading-relaxed">
+            <p className="prose-body text-muted">
               Software developer with an architect&apos;s eye for structure.
               I build automation tools, data pipelines, and intelligent systems
               that make complex work simpler. Particularly interested in AI,

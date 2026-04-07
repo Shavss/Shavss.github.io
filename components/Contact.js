@@ -35,10 +35,10 @@ export default function Contact() {
       <div className="h-[3px] bg-ink mb-10 md:mb-14" />
 
       <motion.div {...fade} transition={{ duration: 0.6 }}>
-        <h2 className="font-display text-4xl md:text-6xl text-ink uppercase tracking-tight leading-[0.9] mb-6">
+        <h2 className="font-display text-[28px] md:text-[36px] text-ink uppercase tracking-tight leading-[1.1] mb-6">
           Let&apos;s Work<br />Together
         </h2>
-        <p className="font-body text-sm text-muted max-w-md leading-relaxed mb-12">
+        <p className="prose-body text-muted max-w-md mb-12">
           Open to software engineering and ML roles. Feel free to reach out.
         </p>
       </motion.div>
@@ -56,7 +56,7 @@ export default function Contact() {
           <span className="font-mono text-xs text-muted tracking-wider uppercase">
             {link.label}
           </span>
-          <span className="font-body text-sm text-ink group-hover:text-accent transition-colors">
+          <span className="font-body text-[15px] text-ink group-hover:text-accent transition-colors">
             {link.text}
           </span>
         </a>

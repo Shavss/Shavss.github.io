@@ -53,7 +53,7 @@ export default function InstitutionsBanner() {
 
   return (
     <div className="py-10 border-y border-rule">
-      <p className="font-mono text-[0.6rem] text-muted tracking-[0.2em] uppercase mb-6 px-6 md:px-10">
+      <p className="font-mono text-xs text-muted tracking-[0.2em] uppercase mb-6 px-6 md:px-10">
         Collaborations
       </p>
 
@@ -61,7 +61,7 @@ export default function InstitutionsBanner() {
         <div ref={trackRef} className="flex whitespace-nowrap will-change-transform">
           {ITEMS.map((name, i) => (
             <div key={i} className="inline-flex items-center flex-shrink-0">
-              <span className="font-mono text-xs tracking-wider uppercase text-ink/60 px-4 md:px-6">
+              <span className="font-mono text-xs tracking-wider uppercase text-muted px-4 md:px-6">
                 {name}
               </span>
               <span className="text-muted font-mono text-xs select-none">&mdash;</span>

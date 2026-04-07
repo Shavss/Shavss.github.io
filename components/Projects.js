@@ -49,7 +49,7 @@ export default function Projects() {
                 <p className="font-mono text-xs text-accent tracking-wide mb-4">
                   {p.subtitle}
                 </p>
-                <p className="font-body text-sm text-muted leading-relaxed">
+                <p className="prose-body text-muted">
                   {p.description}
                 </p>
               </div>
