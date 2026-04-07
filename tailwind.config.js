@@ -8,10 +8,18 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['var(--font-mono)', 'monospace'],
+        display: ['var(--font-space-mono)', 'monospace'],
+        body: ['var(--font-work-sans)', 'sans-serif'],
+        mono: ['var(--font-space-mono)', 'monospace'],
       },
       colors: {
-        accent: '#7c6af7',
+        canvas: '#0A0A0A',
+        surface: '#111111',
+        ink: '#E8E4DC',
+        muted: '#6B6560',
+        accent: '#D4580A',
+        rule: '#2A2A2A',
+        stroke: '#1E1E1E',
       },
     },
   },

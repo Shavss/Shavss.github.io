@@ -3,13 +3,13 @@
 import { useEffect, useRef } from 'react'
 
 const INSTITUTIONS = [
-  { name: 'Technical University of Munich' },
-  { name: 'University of Glasgow' },
-  { name: 'Siemens' },
-  { name: 'David Chipperfield Architects' },
-  { name: 'ZM-I' },
-  { name: 'Innovia Partners' },
-  { name: 'MIT Senseable City Lab' },
+  'Technical University of Munich',
+  'University of Glasgow',
+  'Siemens',
+  'David Chipperfield Architects',
+  'ZM-I',
+  'Innovia Partners',
+  'MIT Senseable City Lab',
 ]
 
 const ITEMS = [...INSTITUTIONS, ...INSTITUTIONS]
@@ -52,19 +52,19 @@ export default function InstitutionsBanner() {
   }, [])
 
   return (
-    <div className="w-full py-10 border-y border-white/5">
-      <p className="text-center text-xs tracking-widest uppercase text-white/30 mb-6">
-        Institutions &amp; organisations I&apos;ve worked with
+    <div className="py-10 border-y border-rule">
+      <p className="font-mono text-[0.6rem] text-muted tracking-[0.2em] uppercase mb-6 px-6 md:px-10">
+        Collaborations
       </p>
 
       <div className="overflow-hidden">
         <div ref={trackRef} className="flex whitespace-nowrap will-change-transform">
-          {ITEMS.map((inst, i) => (
+          {ITEMS.map((name, i) => (
             <div key={i} className="inline-flex items-center flex-shrink-0">
-              <span className="text-sm font-semibold tracking-widest uppercase text-white/70 px-8">
-                {inst.name}
+              <span className="font-mono text-xs tracking-wider uppercase text-ink/60 px-4 md:px-6">
+                {name}
               </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#6667AB] flex-shrink-0" />
+              <span className="text-muted font-mono text-xs select-none">&mdash;</span>
             </div>
           ))}
         </div>
