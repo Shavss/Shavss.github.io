@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import InstitutionsBanner from './InstitutionsBanner'
 
 const LINKS = [
   {
@@ -38,9 +39,9 @@ export default function Contact() {
         <h2 className="font-display text-4xl md:text-6xl text-ink uppercase tracking-tight leading-[0.9] mb-6">
           Let&apos;s Work<br />Together
         </h2>
-        <p className="font-body text-sm text-muted max-w-md leading-relaxed mb-12">
-          Open to software engineering and ML roles. Feel free to reach out.
+        <p className="font-body text-sm text-muted max-w-md leading-relaxed mb-0">
         </p>
+
       </motion.div>
 
       {/* Contact links — ruled list */}
@@ -62,8 +63,11 @@ export default function Contact() {
         </a>
       ))}
 
+      {/* Institutions banner */}
+      <InstitutionsBanner />
+
       {/* Footer */}
-      <div className="mt-20 pt-6 border-t border-rule flex justify-between items-center">
+      <div className="mt-12 pt-6 border-t border-rule flex justify-between items-center">
         <p className="font-mono text-xs text-muted tracking-wider">
           KR<span className="text-accent">.</span>
         </p>

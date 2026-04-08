@@ -1,13 +1,5 @@
 export const featured = [
   {
-      name: 'Paketpost Aerial Vision',
-      subtitle: 'Group Project — Technical University of Munich',
-      description:
-        'Full-stack proptech web application built for a real Munich postal depot redevelopment brief. Combines interactive 3D site visualisation with live data overlays to support early-stage urban design decisions. Built with the MERN stack and deployed on Azure.',
-      tags: ['MongoDB', 'Express', 'React', 'Node.js', 'Azure'],
-      url: 'https://shavss.github.io/ITBE-Fusion-Lab/',
-  },
-  {
     name: 'Digital Naturalist',
     subtitle: 'MSc Thesis — Massachusetts Institute of Technology',
     description:
@@ -24,6 +16,18 @@ export const featured = [
       url: 'https://shavss.github.io/climate_active_envelopes/',
   },
   {
+      name: 'Paketpost Aerial Vision',
+      subtitle: 'Group Project — Technical University of Munich',
+      description:
+        'Full-stack proptech web application built for a real Munich postal depot redevelopment brief. Combines interactive 3D site visualisation with live data overlays to support early-stage urban design decisions. Built with the MERN stack and deployed on Azure.',
+      tags: ['MongoDB', 'Express', 'React', 'Node.js', 'Azure'],
+      url: 'https://shavss.github.io/ITBE-Fusion-Lab/',
+  },
+]
+
+export const all = [
+  ...featured,
+  {
       name: 'Automated PDF Extraction Pipeline',
       subtitle: 'Data Engineer — ZM-I Engineers',
       description:
@@ -31,10 +35,6 @@ export const featured = [
       tags: ['Python', 'SQL', 'Azure', 'SQLAlchemy', 'Automation'],
       url: 'https://github.com/Shavss/data-managment',
   },
-]
-
-export const all = [
-  ...featured,
   {
     name: 'Parse That!',
     subtitle: 'AEC Hackathon - Munich Edition 2024',

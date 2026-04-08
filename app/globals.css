@@ -4,14 +4,31 @@
 
 /* ── Design System Tokens ── */
 
-:root {
+/* Theme A — Dark Bauhaus (default) */
+:root,
+[data-theme="a"] {
   --color-canvas: #0A0A0A;
   --color-surface: #111111;
   --color-ink: #E8E4DC;
-  --color-muted: #6B6560;
+  --color-muted: #8A8480;
   --color-accent: #D4580A;
   --color-rule: #2A2A2A;
   --color-stroke: #1E1E1E;
+  --color-canvas-alpha: rgba(10, 10, 10, 0.92);
+  --color-ink-faded: rgba(232, 228, 220, 0.6);
+}
+
+/* Theme B — Light Swiss Editorial */
+[data-theme="b"] {
+  --color-canvas: #F5F2EC;
+  --color-surface: #EDEAE3;
+  --color-ink: #0A0A0A;
+  --color-muted: #5A5652;
+  --color-accent: #D4580A;
+  --color-rule: #D0CDC6;
+  --color-stroke: #E0DDD6;
+  --color-canvas-alpha: rgba(245, 242, 236, 0.92);
+  --color-ink-faded: rgba(10, 10, 10, 0.55);
 }
 
 /* ── Base ── */
@@ -86,4 +103,38 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-muted);
+}
+
+/* ── Utility: ink at reduced opacity (for CSS-var-safe opacity) ── */
+
+.text-ink-faded {
+  color: var(--color-ink-faded);
+}
+
+/* ── Institutions marquee ── */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ── GridPulse terminal cursor blink ── */
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.grid-pulse-cursor {
+  animation: blink 1s steps(1) infinite;
 }

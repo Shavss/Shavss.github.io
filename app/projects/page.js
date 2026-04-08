@@ -1,5 +1,6 @@
 import { all } from '/data/projectsData'
 import Link from 'next/link'
+import CursorGrid from '../../components/CursorGrid'
 
 export const metadata = {
   title: 'Projects — Kacper Ryske',
@@ -9,6 +10,7 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <main className="relative min-h-screen bg-canvas px-6 md:px-10 py-24">
+      <CursorGrid isStatic />
       <div className="max-w-6xl mx-auto">
         <Link
           href="/"

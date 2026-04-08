@@ -19,7 +19,8 @@ Loaded via `next/font/google` in `app/layout.js`. Add new fonts here only.
 ## Styling Rules
 - All utility classes must exist in Tailwind v3 base stylesheet (no JIT-only classes that won't purge correctly)
 - Custom CSS goes in `globals.css` using `@layer` or plain class definitions
-- All colours defined as CSS custom properties in `globals.css` and as Tailwind theme tokens in `tailwind.config.js`
+- All colours defined as CSS custom properties in `globals.css`; Tailwind theme tokens in `tailwind.config.js` reference those variables
+- Tailwind colour opacity modifiers (`text-ink/60`) do not work with CSS variable colours — use explicit utility classes instead
 
 ## Component Conventions
 - All interactive components are `'use client'`; static components can be server components
@@ -36,19 +37,23 @@ Loaded via `next/font/google` in `app/layout.js`. Add new fonts here only.
 
 ## Design System — Swiss Grid / Brutalist Typography
 
-### Colour Palette
-- **Canvas (bg):** `#0A0A0A` — near-black
-- **Surface:** `#111111` — slightly raised backgrounds
-- **Ink (fg):** `#E8E4DC` — warm off-white
-- **Muted:** `#6B6560` — warm gray for secondary text
-- **Accent:** `#D4580A` — burnt orange (Bauhaus-inspired)
-- **Rule:** `#2A2A2A` — visible structural rules
-- **Stroke:** `#1E1E1E` — subtle borders
+### Colour Palettes (2 themes via `data-theme` attribute)
+
+**Theme A — Dark Bauhaus (default):**
+- Canvas: `#0A0A0A` / Surface: `#111111` / Ink: `#E8E4DC`
+- Muted: `#8A8480` (WCAG AA compliant, 5.4:1) / Accent: `#D4580A`
+- Rule: `#2A2A2A` / Stroke: `#1E1E1E`
+
+**Theme B — Light Swiss Editorial:**
+- Canvas: `#F5F2EC` / Surface: `#EDEAE3` / Ink: `#0A0A0A`
+- Muted: `#5A5652` / Accent: `#D4580A`
+- Rule: `#D0CDC6` / Stroke: `#E0DDD6`
 
 ### Key Accent Colour
 `#D4580A` (burnt orange) — Bauhaus-inspired editorial accent.
 
 ### Design Decisions
-- About section: restored in page.js with Swiss grid two-column layout
-- AIOrb: removed — felt decorative, not intentional in this aesthetic
-- CursorBuddy: removed — radial gradient glow conflicts with brutalist direction
+- CursorGrid: canvas-based registration-mark grid with radial pulse waves on cursor move
+- GridPulse: terminal-style data readout in Hero (x/y coords, frame counter, timestamp, resolution)
+- ThemeSwitcher: fixed bottom-right, cycles two palettes, persists to localStorage
+- Featured projects: reduced to 3 

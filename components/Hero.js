@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import GridPulse from './GridPulse'
 
 const TECHS = [
   'Python', 'PyTorch', 'React', 'Next.js',
@@ -27,14 +28,17 @@ export default function Hero() {
           className="h-[3px] bg-ink mb-10 md:mb-14"
         />
 
-        {/* Name — massive typographic statement */}
-        <motion.h1
+        {/* Name + GridPulse row */}
+        <motion.div
           variants={fade}
           transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-display text-5xl md:text-[6rem] lg:text-[9rem] font-bold leading-[0.88] tracking-tight text-ink uppercase"
+          className="flex justify-between items-start"
         >
-          Kacper<br />Ryske
-        </motion.h1>
+          <h1 className="font-display text-5xl md:text-[6rem] lg:text-[9rem] font-bold leading-[0.88] tracking-tight text-ink uppercase">
+            Kacper<br />Ryske
+          </h1>
+          <GridPulse />
+        </motion.div>
 
         {/* Thin rule */}
         <motion.div
