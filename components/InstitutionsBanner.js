@@ -1,9 +1,8 @@
 const INSTITUTIONS = [
   'Technical University of Munich',
-  'University of Glasgow',
   'Siemens',
   'David Chipperfield Architects',
-  'ZM-I',
+  'Zilch + Müller Ingenieure',
   'Innovia Partners',
   'MIT Senseable City Lab',
 ]

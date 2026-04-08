@@ -17,7 +17,7 @@ const fade = {
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-10 pt-20 md:pt-24">
+    <section className="min-h-screen flex flex-col justify-center px-6 md:px-10 pt-8 md:pt-12">
       <motion.div
         initial="initial"
         animate="animate"
@@ -39,7 +39,9 @@ export default function Hero() {
           <h1 className="font-display text-5xl md:text-[6rem] lg:text-[9rem] font-bold leading-[0.88] tracking-tight text-ink uppercase">
             Kacper<br />Ryske
           </h1>
-          <GridPulse />
+          <div className="mt-3">
+            <GridPulse />
+          </div>
         </motion.div>
 
         {/* Thin rule */}
@@ -63,7 +65,7 @@ export default function Hero() {
           </div>
           <div>
             <p className="font-body text-sm text-muted leading-relaxed">
-              Software developer with an architect&apos;s eye for structure.
+              Software developer with an architect&apos;s eye for detail.
               I build automation tools, data pipelines, and intelligent systems
               that make complex work simpler. Particularly interested in AI,
               analytical systems, and robust software for real-world applications.
@@ -104,7 +106,7 @@ export default function Hero() {
         <motion.div
           variants={fade}
           transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-          className="h-px bg-rule mt-6 mb-6 md:mt-8 md:mb-8"
+          className="h-px bg-rule mt-2 mb-2 md:mt-4 md:mb-4"
         />
 
         {/* CTAs */}

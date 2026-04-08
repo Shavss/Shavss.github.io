@@ -53,19 +53,7 @@ export default function GridPulse() {
   const refs = [xRef, yRef, resValRef]
 
   return (
-    <div
-      className="hidden md:block"
-      style={{
-        width: '180px',
-        height: '130px',
-        border: '1px solid var(--color-rule)',
-        background: 'var(--color-surface)',
-        padding: '12px',
-        fontFamily: 'var(--font-space-mono), monospace',
-        fontSize: '11px',
-        lineHeight: '20px',
-      }}
-    >
+    <div className="hidden md:block font-mono text-xs leading-tight text-ink space-y-1">
       {ROWS.map((row, i) => (
         <div key={row.label} style={{ display: 'flex' }}>
           <span

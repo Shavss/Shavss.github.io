@@ -10,7 +10,7 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <main className="relative min-h-screen bg-canvas px-6 md:px-10 py-24">
-      <CursorGrid isStatic />
+      <CursorGrid />
       <div className="max-w-6xl mx-auto">
         <Link
           href="/"
@@ -28,11 +28,9 @@ export default function ProjectsPage() {
         <div className="h-[3px] bg-ink mb-0" />
 
         {all.map((p, i) => (
-          <a
+          <Link
             key={p.name}
-            href={p.url}
-            target="_blank"
-            rel="noreferrer"
+            href={`/projects/${p.slug}`}
             className="project-entry block group"
           >
             <div className="border-t border-rule pt-8 pb-10">
@@ -67,7 +65,7 @@ export default function ProjectsPage() {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
 
         <div className="border-t border-rule pt-8">
