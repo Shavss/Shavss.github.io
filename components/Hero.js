@@ -3,9 +3,11 @@
 import { motion } from 'framer-motion'
 import GridPulse from './GridPulse'
 
-const TECHS = [
-  'Python', 'PyTorch', 'React', 'Next.js',
-  'JavaScript', 'PostgreSQL', 'Docker', 'Git',
+const SKILL_GROUPS = [
+  { label: 'LANGUAGES', items: ['Python', 'JavaScript', 'C#', 'SQL'] },
+  { label: 'ML / AI', items: ['PyTorch', 'ResNet', 'XGBoost', 'Transformers'] },
+  { label: 'WEB', items: ['React', 'Next.js', 'Node.js', 'Three.js'] },
+  { label: 'TOOLS', items: ['Git', 'Docker', 'Azure', 'Jupyter'] },
 ]
 
 const fade = {
@@ -15,7 +17,7 @@ const fade = {
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-10">
+    <section className="min-h-screen flex flex-col justify-center px-6 md:px-10 pt-20 md:pt-24">
       <motion.div
         initial="initial"
         animate="animate"
@@ -76,29 +78,53 @@ export default function Hero() {
           className="h-px bg-rule mt-8 mb-6 md:mt-10 md:mb-8"
         />
 
-        {/* Tech stack + CTAs */}
+        {/* Skills breakdown */}
         <motion.div
           variants={fade}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-          className="flex flex-col md:flex-row md:justify-between md:items-end gap-6"
+          className="grid grid-cols-2 md:grid-cols-4 gap-0"
         >
-          <p className="font-mono text-xs text-muted tracking-wider">
-            {TECHS.join(' / ')}
-          </p>
-          <div className="flex gap-8">
-            <a
-              href="#projects"
-              className="font-mono text-xs text-ink tracking-wider uppercase hover:text-accent transition-colors"
-            >
-              View Work &rarr;
-            </a>
-            <a
-              href="#contact"
-              className="font-mono text-xs text-ink tracking-wider uppercase hover:text-accent transition-colors"
-            >
-              Contact &rarr;
-            </a>
-          </div>
+          {SKILL_GROUPS.map((group) => (
+            <div key={group.label} className="pr-4">
+              <span className="font-display text-[10px] text-accent uppercase tracking-[0.2em] block mb-2">
+                {group.label}
+              </span>
+              <div className="space-y-0.5 pb-2">
+                {group.items.map((item) => (
+                  <p key={item} className="font-mono text-xs text-muted tracking-wider">
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Thin rule */}
+        <motion.div
+          variants={fade}
+          transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+          className="h-px bg-rule mt-6 mb-6 md:mt-8 md:mb-8"
+        />
+
+        {/* CTAs */}
+        <motion.div
+          variants={fade}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          className="flex justify-end gap-8"
+        >
+          <a
+            href="#projects"
+            className="font-mono text-xs text-ink tracking-wider uppercase hover:text-accent transition-colors"
+          >
+            View Work &rarr;
+          </a>
+          <a
+            href="#contact"
+            className="font-mono text-xs text-ink tracking-wider uppercase hover:text-accent transition-colors"
+          >
+            Contact &rarr;
+          </a>
         </motion.div>
       </motion.div>
     </section>
