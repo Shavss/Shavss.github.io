@@ -33,7 +33,7 @@ const projects = [
       },
     ],
     outcome:
-      'After sensor-mimetic training, the domain-adjusted CNN baseline achieves an improvemet of X.X%. Combining this model with the environmental expert, a fused Top-1 accuracy statistically significant +2.55± percentage point absolute improvement over the adjusted vision-only baseline. That is total of X.XX improvement over the model initially MIT was working with',
+      'After sensor-mimetic training, the domain-adjusted CNN baseline achieves an improvemet of +13.0 pp. Combining this model with the environmental expert, a fused Top-1 experienced further absolute improvement of +2.55 pp over the adjusted vision-only baseline. That is total of 15.55 pp improvement over the initially deployed model.',
       //'+2.5 percentage point average accuracy improvement over the vision-only baseline across 8 urban insect species. Demonstrated that habitat context is a viable complementary signal for automated species identification in urban environments.',
   },
   {
@@ -121,36 +121,40 @@ const projects = [
     name: 'Automated PDF Extraction Pipeline',
     subtitle: 'Data Engineer — Zilch + Müller Ingenieure',
     description:
-      'Python pipeline automating extraction of structural engineering data from PDF reports using modular scrapers. Parsed data is inserted into local and Azure SQL databases via SQLAlchemy, feeding a physics-informed neural network for structural design optimisation.',
-    tags: ['Python', 'SQL', 'Azure', 'SQLAlchemy', 'Automation'],
+      'Python ETL pipeline extracting structural engineering data from raw engineering documents as the first stage of the HyMoDe research pipeline, feeding a physics-informed neural network for structural design optimisation.',
+    tags: ['Python', 'SQL', 'Azure', 'SQLAlchemy', 'Pandas', 'Automation'],
     url: 'https://github.com/Shavss/data-managment',
     role: 'Data Engineer',
     context: 'Zilch + Müller Ingenieure',
     year: '2024',
     challenge:
-      'Thousands of structural engineering reports contained critical design data locked in PDF format. Manual extraction was infeasible at scale, and the downstream physics-informed neural network required clean, structured input for training.',
+      'Structural engineering data from real constructed buildings existed only in raw documents: structural calculation PDFs, reinforcement plans, position plans, and Excel-based project sheets, each with different layouts and formatting conventions. Physics-informed neural networks need clean, structured, relational training data, and none of the existing documents could feed that pipeline without a purpose-built extraction layer.',
     approach:
-      'Built a modular Python pipeline with configurable scrapers tailored to each report format. Parsed data flows through validation layers before insertion into local and Azure SQL databases via SQLAlchemy ORM. Structured output feeds directly into the neural network training pipeline.',
+      'Built a modular Python pipeline where each document type gets its own configurable scraper, selectable at runtime via a parser variable. Parsed data is loaded into a structured relational schema covering six document source types including Bewehrungsplan, Positionplan, Statik, Decke, and Stützen, inserted into both local and Azure SQL databases via SQLAlchemy. All operations and errors are logged to a file for traceability. The structured output serves as the data backbone for the downstream surrogate model training within the HyMoDe Hybrid Modeling Method.',
     keyFeatures: [
       {
-        title: 'Modular PDF Scrapers',
-        description: 'Configurable extraction modules per report type, handling diverse layouts and formatting conventions.',
+        title: 'Modular Document Scrapers',
+        description:
+          'Configurable extraction modules covering structural calculation PDFs, reinforcement plans, position plans, and Excel project sheets, each handling the layout and formatting conventions specific to its document type.',
       },
       {
-        title: 'SQLAlchemy ORM Layer',
-        description: 'Type-safe database operations with schema validation ensuring data integrity before insertion.',
+        title: 'Relational Database Schema',
+        description:
+          'Data is loaded into a purpose-designed relational schema with tables grouped by document source type, ensuring the structured output is directly consumable by downstream machine learning models.',
       },
       {
-        title: 'Azure SQL Integration',
-        description: 'Dual-target persistence to local development databases and cloud Azure SQL for production workloads.',
+        title: 'Dual-Target Persistence',
+        description:
+          'SQLAlchemy ORM layer targeting both a local development database and Azure SQL, with error logging to a output file for traceability across processing runs.',
       },
       {
-        title: 'Neural Network Pipeline',
-        description: 'Extracted data feeds a physics-informed neural network for structural design optimisation downstream.',
+        title: 'HyMoDe Pipeline Integration',
+        description:
+          'Structured output feeds the surrogate model training stage of the HyMoDe pipeline, where physics-informed neural networks constrained by structural mechanics differential equations predict optimised component designs from limited training data.',
       },
     ],
     outcome:
-      'Automated extraction of thousands of structural data points from legacy PDF reports. Pipeline serves as the data backbone for the company\'s neural network research in structural design optimisation.',
+      'The pipeline automates extraction across multiple engineering document types and directly enables the neural network training stage of the HyMoDe structural optimisation research.',
   },
   {
     slug: 'parse-that',
