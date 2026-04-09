@@ -5,7 +5,7 @@ const projects = [
     subtitle: 'MSc Thesis — Massachusetts Institute of Technology',
     description:
       'Bayesian Product of Experts fusion model combining ResNet-18 vision with XGBoost habitat suitability for context-aware urban insect species classification across 8 species and 11,000+ citizen-science observations in Amsterdam. Achieved a total of +15.55 pp accuracy improvement over the initially deployed vision-only model.',
-    tags: ['Python', 'PyTorch', 'XGBoost', 'ResNet-18', 'PoE Fusion', 'Jupyter Notebook', 'HTTP APIs', ],
+    tags: ['Python', 'PyTorch', 'XGBoost', 'ResNet-18', 'PoE Fusion', 'Jupyter Notebook', 'REST API', ],
     url: 'https://github.com/Shavss/thesis-poe-fusion',
     role: 'MSc Researcher',
     context: 'MIT Senseable City Lab',
