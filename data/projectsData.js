@@ -5,8 +5,9 @@ const projects = [
     subtitle: 'MSc Thesis — Massachusetts Institute of Technology',
     description:
       'Bayesian Product of Experts fusion model combining ResNet-18 vision with XGBoost habitat suitability for context-aware urban insect species classification across 8 species and 11,000+ citizen-science observations in Amsterdam. Achieved a total of +15.55 pp accuracy improvement over the initially deployed vision-only model.',
-    tags: ['Python', 'PyTorch', 'XGBoost', 'ResNet-18', 'PoE Fusion', 'Jupyter Notebook', 'REST API', ],
+    tags: ['Python', 'PyTorch', 'Computer Vision', 'XGBoost', 'ResNet-18', 'PoE Fusion', 'Jupyter Notebook', 'REST API', ],
     url: 'https://github.com/Shavss/thesis-poe-fusion',
+    parentProject: { label: 'Part of B++', url: 'https://senseable.mit.edu/b++/' },
     role: 'MSc Researcher',
     context: 'MIT Senseable City Lab',
     year: '2025 - 2026',
@@ -165,7 +166,8 @@ const projects = [
     description:
       'LLM-powered data pipeline built at AEC Hackathon Munich 2024 with MOD, an open-source platform for modular construction. Converts unstructured manufacturer PDFs into structured JSON compliant with mod-dlm, an open-source DSL for prefab AEC components, using Marker for preprocessing, GPT-4 via LangChain for extraction, and Pydantic for validation.',
     tags: ['Python', 'GPT-4', 'LangChain', 'Pydantic', 'Flask', 'React', 'Marker', 'AEC'],
-    url: 'https://github.com/LupoSun/AECHachathon_MOD_ParseThat',
+    url: 'https://github.com/mod-construction/AECHachathon_MOD_ParseThat',
+    parentProject: { label: 'Part of MOD', url: 'https://www.mod.construction/' },
     vimeoId: '1175419101',
     role: 'Developer',
     context: 'AEC Hackathon — MOD',
