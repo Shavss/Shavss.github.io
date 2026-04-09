@@ -21,7 +21,7 @@ export default function CursorGrid({ isStatic = false }) {
   const rafRef = useRef(null)
 
   useEffect(() => {
-    if (window.matchMedia('(pointer: coarse)').matches) return
+    const isTouch = window.matchMedia('(pointer: coarse)').matches
 
     const canvas = canvasRef.current
     if (!canvas) return
@@ -71,7 +71,7 @@ export default function CursorGrid({ isStatic = false }) {
       ctx.globalAlpha = 1
     }
 
-    if (isStatic) {
+    if (isStatic || isTouch) {
       drawStatic()
       const onResize = () => { resize(); drawStatic() }
       window.addEventListener('resize', onResize)
