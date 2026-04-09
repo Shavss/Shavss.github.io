@@ -39,11 +39,12 @@ const projects = [
   {
     slug: 'climate-active-envelopes',
     name: 'Climate Active Envelopes',
-    subtitle: 'Research Assistant — Professorship of Digital Fabrication',
+    subtitle: 'Research Assistant — Technical University of Munich',
     description:
        'Research project at the Professorship of Digital Fabrication at TU Munich, developed in collaboration with a PhD researcher, investigating climate-resilient mono-material brick wall systems where geometry actively responds to environmental conditions.',
     tags: ['Python', 'COMPAS', 'Rhino/Grasshopper', 'ABB Robotics', 'ROS', 'Docker', 'Shapely'],
-    url: 'https://shavss.github.io/climate_active_envelopes/',
+    url: 'https://github.com/augmentedfabricationlab/climate_active_envelopes',
+    vimeoId: '1177204046',
     role: 'Research Assistant',
     context: 'Technical University of Munich — Professorship of Digital Fabrication',
     year: '2023-2025',
@@ -83,7 +84,8 @@ const projects = [
     description:
       'Full-stack PropTech platform built for the real-world redevelopment of Munich\'s historic Paketpost depot into a mixed-use quarter. It serves prospective buyers and renters exploring available units alongside existing residents managing their flat through an in-browser BIM viewer. Built on the MERN stack and deployed on Azure.',
     tags: ['MongoDB', 'Express', 'React', 'Node.js', 'Three.js', 'IFC.js', 'Docker', 'Azure', 'Vite', 'Nginx'],
-    url: 'https://shavss.github.io/ITBE-Fusion-Lab/',
+    url: 'https://github.com/Shavss/ITBE-Fusion-Lab',
+    vimeoId: '1175405454',
     role: 'Full-Stack Developer',
     context: 'TU Munich — Fusion Lab WiSe 2024/25',
     year: '2024-2025',
@@ -163,7 +165,8 @@ const projects = [
     description:
       'LLM-powered data pipeline built at AEC Hackathon Munich 2024 with MOD, an open-source platform for modular construction. Converts unstructured manufacturer PDFs into structured JSON compliant with mod-dlm, an open-source DSL for prefab AEC components, using Marker for preprocessing, GPT-4 via LangChain for extraction, and Pydantic for validation.',
     tags: ['Python', 'GPT-4', 'LangChain', 'Pydantic', 'Flask', 'React', 'Marker', 'AEC'],
-    url: 'https://shavss.github.io/AECHachathon_MOD_ParseThat/',
+    url: 'https://github.com/LupoSun/AECHachathon_MOD_ParseThat',
+    vimeoId: '1175419101',
     role: 'Developer',
     context: 'AEC Hackathon — MOD',
     year: '2024',

@@ -1,7 +1,9 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import VideoModal from './VideoModal'
 
 const fade = {
   initial: { opacity: 0, y: 20 },
@@ -16,6 +18,7 @@ const scrollReveal = {
 
 export default function CaseStudy({ project, index, prev, next }) {
   const num = String(index + 1).padStart(2, '0')
+  const [videoOpen, setVideoOpen] = useState(false)
 
   return (
     <article className="py-24 md:py-32">
@@ -201,11 +204,11 @@ export default function CaseStudy({ project, index, prev, next }) {
         </p>
       </motion.div>
 
-      {/* External link */}
+      {/* External link + Video */}
       <motion.div
         {...scrollReveal}
         transition={{ duration: 0.5 }}
-        className="mt-10"
+        className="mt-10 flex flex-wrap gap-4"
       >
         <a
           href={project.url}
@@ -218,7 +221,28 @@ export default function CaseStudy({ project, index, prev, next }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
           </svg>
         </a>
+
+        {project.vimeoId && (
+          <button
+            onClick={() => setVideoOpen(true)}
+            className="inline-flex items-center gap-3 border border-rule px-6 py-3 font-mono text-xs text-ink uppercase tracking-wider hover:border-accent hover:text-accent transition-colors cursor-pointer"
+          >
+            Watch Video
+            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
+        )}
       </motion.div>
+
+      {/* Video modal */}
+      {project.vimeoId && (
+        <VideoModal
+          vimeoId={project.vimeoId}
+          isOpen={videoOpen}
+          onClose={() => setVideoOpen(false)}
+        />
+      )}
 
       {/* ── Bottom Navigation ── */}
       <div className="h-[3px] bg-ink mt-20 md:mt-32" />
