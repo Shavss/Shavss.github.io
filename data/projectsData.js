@@ -34,7 +34,7 @@ const projects = [
       },
     ],
     outcome:
-      'After sensor-mimetic training, the domain-adjusted CNN baseline achieves an improvemet of +13.0 pp. Combining this model with the environmental expert, a fused Top-1 experienced further absolute improvement of +2.55 pp over the adjusted vision-only baseline. That is total of 15.55 pp improvement over the initially deployed model.',
+      'After sensor-mimetic training, the domain-adjusted CNN baseline achieves an improvemet of +13.0 pp. Combining this model with the environmental expert, a fused Top-1 experienced further absolute improvement of +2.55 pp over the adjusted vision-only baseline. That is total of +15.55 pp improvement over the initially deployed model.',
       //'+2.5 percentage point average accuracy improvement over the vision-only baseline across 8 urban insect species. Demonstrated that habitat context is a viable complementary signal for automated species identification in urban environments.',
   },
   {
@@ -45,6 +45,7 @@ const projects = [
        'Research project at the Professorship of Digital Fabrication at TU Munich, developed in collaboration with a PhD researcher, investigating climate-resilient mono-material brick wall systems where geometry actively responds to environmental conditions.',
     tags: ['Python', 'COMPAS', 'Rhino/Grasshopper', 'ABB Robotics', 'ROS', 'Docker', 'Shapely'],
     url: 'https://github.com/augmentedfabricationlab/climate_active_envelopes',
+    parentProject: { label: 'Research Page', url: 'https://augmentedfabricationlab.github.io/climate_active_envelopes/' },
     vimeoId: '1177204046',
     role: 'Research Assistant',
     context: 'Technical University of Munich — Professorship of Digital Fabrication',
@@ -127,6 +128,7 @@ const projects = [
       'Python ETL pipeline extracting structural engineering data from raw engineering documents as the first stage of the HyMoDe research pipeline, feeding a physics-informed neural network for structural design optimisation.',
     tags: ['Python', 'SQL', 'Azure', 'SQLAlchemy', 'Pandas', 'Automation'],
     url: 'https://github.com/Shavss/data-managment',
+    parentProject: { label: 'Part of HyMoDe', url: 'https://www.tu-braunschweig.de/isd/forschung/methodenentwicklung/physik-und-datengetriebene-modellierung-zur-berechnung-und-bemessung-von-tragwerken-in-fruehen-entwurfsphasen' },
     role: 'Data Engineer',
     context: 'Zilch + Müller Ingenieure',
     year: '2024',
