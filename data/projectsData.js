@@ -127,7 +127,7 @@ const projects = [
     description:
       'Python ETL pipeline extracting structural engineering data from raw engineering documents as the first stage of the HyMoDe research pipeline, feeding a physics-informed neural network for structural design optimisation.',
     tags: ['Python', 'SQL', 'Azure', 'SQLAlchemy', 'Pandas', 'Automation'],
-    url: 'https://github.com/Shavss/data-managment',
+    url: 'https://github.com/Shavss/data-management',
     parentProject: { label: 'Part of HyMoDe', url: 'https://www.tu-braunschweig.de/isd/forschung/methodenentwicklung/physik-und-datengetriebene-modellierung-zur-berechnung-und-bemessung-von-tragwerken-in-fruehen-entwurfsphasen' },
     role: 'Data Engineer',
     context: 'Zilch + Müller Ingenieure',
