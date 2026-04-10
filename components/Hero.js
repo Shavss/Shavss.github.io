@@ -60,12 +60,12 @@ export default function Hero() {
           <div>
             <h2 className="font-display text-sm md:text-base text-ink uppercase tracking-wider leading-relaxed">
               Software Developer<br />
-              &amp; ML Researcher
+              &amp; ML Systems
             </h2>
           </div>
           <div>
             <p className="font-body text-sm text-muted leading-relaxed">
-              I'm a designer of intelligent systems with an architect's eye for detail. I like the messy problems where the model is only half of the story. Most recently at MIT, I built a machine learning pipeline that doesn't fall apart the moment it leaves the safety of a Jupyter notebook.
+              Trained as an architect. Ended up building ML pipelines. Turns out the instinct is the same. Both collapse if the foundation is wrong. I like the messy problems where the model is only half the story. The other half is making it actually work outside a notebook.
             </p>
           </div>
         </motion.div>
