@@ -65,10 +65,7 @@ export default function Hero() {
           </div>
           <div>
             <p className="font-body text-sm text-muted leading-relaxed">
-              Software developer with an architect&apos;s eye for detail.
-              I build automation tools, data pipelines, and intelligent systems
-              that make complex work simpler. Particularly interested in AI,
-              analytical systems, and robust software for real-world applications.
+              I'm a designer of intelligent systems with an architect's eye for detail. I like the messy problems where the model is only half of the story. Most recently at MIT, I built a machine learning pipeline that doesn't fall apart the moment it leaves the safety of a Jupyter notebook.
             </p>
           </div>
         </motion.div>
