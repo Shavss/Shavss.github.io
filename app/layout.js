@@ -34,6 +34,16 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+
+            // Check for internal traffic cookie before config fires
+            var isInternal = document.cookie.split(';').some(function(c) {
+              return c.trim() === 'ga_internal=true';
+            });
+
+            if (isInternal) {
+              gtag('set', { 'traffic_type': 'internal' });
+            }
+
             gtag('config', 'G-CKL34G5380');
           `}
         </Script>

@@ -47,6 +47,7 @@ const projects = [
     url: 'https://github.com/augmentedfabricationlab/climate_active_envelopes',
     parentProject: { label: 'Research Page', url: 'https://augmentedfabricationlab.github.io/climate_active_envelopes/' },
     vimeoId: '1177204046',
+    imageFolder: 'cae',
     role: 'Research Assistant',
     context: 'Technical University of Munich — Professorship of Digital Fabrication',
     year: '2023-2025',

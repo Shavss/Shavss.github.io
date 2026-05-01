@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import VideoModal from './VideoModal'
+import ImageGalleryModal from './ImageGalleryModal'
 
 const fade = {
   initial: { opacity: 0, y: 20 },
@@ -19,6 +20,8 @@ const scrollReveal = {
 export default function CaseStudy({ project, index, prev, next }) {
   const num = String(index + 1).padStart(2, '0')
   const [videoOpen, setVideoOpen] = useState(false)
+  const [galleryOpen, setGalleryOpen] = useState(false)
+  const hasImages = project.images && project.images.length > 0
 
   return (
     <article className="py-24 md:py-32">
@@ -247,6 +250,21 @@ export default function CaseStudy({ project, index, prev, next }) {
             </svg>
           </button>
         )}
+
+        {hasImages && (
+          <button
+            onClick={() => setGalleryOpen(true)}
+            className="inline-flex items-center gap-3 border border-rule px-6 py-3 font-mono text-xs text-ink uppercase tracking-wider hover:border-accent hover:text-accent transition-colors cursor-pointer"
+          >
+            View Images
+            <span className="font-mono text-[10px] text-muted tracking-[0.2em]">
+              [{String(project.images.length).padStart(2, '0')}]
+            </span>
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h6v6H4zM14 6h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" />
+            </svg>
+          </button>
+        )}
       </motion.div>
 
       {/* Video modal */}
@@ -255,6 +273,15 @@ export default function CaseStudy({ project, index, prev, next }) {
           vimeoId={project.vimeoId}
           isOpen={videoOpen}
           onClose={() => setVideoOpen(false)}
+        />
+      )}
+
+      {/* Image gallery modal */}
+      {hasImages && (
+        <ImageGalleryModal
+          images={project.images}
+          isOpen={galleryOpen}
+          onClose={() => setGalleryOpen(false)}
         />
       )}
 
