@@ -8,6 +8,7 @@ const projects = [
     tags: ['Python', 'PyTorch', 'Computer Vision', 'XGBoost', 'ResNet-18', 'PoE Fusion', 'Jupyter Notebook', 'REST API', ],
     url: 'https://github.com/Shavss/thesis-poe-fusion',
     parentProject: { label: 'Part of B++', url: 'https://senseable.mit.edu/b++/' },
+    imageFolder: 'digital_naturalist',
     role: 'MSc Researcher',
     context: 'MIT Senseable City Lab',
     year: '2025 - 2026',
