@@ -133,6 +133,7 @@ const projects = [
     parentProject: { label: 'Part of HyMoDe', url: 'https://www.tu-braunschweig.de/isd/forschung/methodenentwicklung/physik-und-datengetriebene-modellierung-zur-berechnung-und-bemessung-von-tragwerken-in-fruehen-entwurfsphasen' },
     role: 'Data Engineer',
     context: 'Zilch + Müller Ingenieure',
+    imageFolder: 'zmi',
     year: '2024',
     challenge:
       'Structural engineering data from real constructed buildings existed only in raw documents: structural calculation PDFs, reinforcement plans, position plans, and Excel-based project sheets, each with different layouts and formatting conventions. Physics-informed neural networks need clean, structured, relational training data, and none of the existing documents could feed that pipeline without a purpose-built extraction layer.',
@@ -173,6 +174,7 @@ const projects = [
     url: 'https://github.com/mod-construction/AECHachathon_MOD_ParseThat',
     parentProject: { label: 'Part of MOD', url: 'https://www.mod.construction/' },
     vimeoId: '1175419101',
+    imageFolder: 'aec',
     role: 'Developer',
     context: 'AEC Hackathon — MOD',
     year: '2024',
