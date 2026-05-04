@@ -239,6 +239,20 @@ export default function CaseStudy({ project, index, prev, next }) {
           </a>
         )}
 
+        {project.dashboardUrl && (
+          <a
+            href={project.dashboardUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-3 border border-rule px-6 py-3 font-mono text-xs text-ink uppercase tracking-wider hover:border-accent hover:text-accent transition-colors"
+          >
+            Live Dashboard
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+            </svg>
+          </a>
+        )}
+
         {project.vimeoId && (
           <button
             onClick={() => setVideoOpen(true)}
