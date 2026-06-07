@@ -59,7 +59,7 @@ export default function Hero() {
         >
           <div>
             <h2 className="font-display text-sm md:text-base text-ink uppercase tracking-wider leading-relaxed">
-              Software Developer<br />
+              Data<br />
               &amp; ML Systems
             </h2>
           </div>
